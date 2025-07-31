@@ -1,12 +1,106 @@
-#navbar{
-    background-color: #7C9D96;
-    color: white;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
+a {
+    color: blue;
+    text-decoration: none;
 }
-a, #navbar{
+
+#navbar {
+    background-color: #7C9D96;
+    padding: 1em;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.brand {
+    font-size: 1.75em;
     color: white;
     text-decoration: none;
 }
+
+.menu-toggle {
+    font-size: 1.8em;
+    background: none;
+    border: none;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+
+/* All nav links */
+.nav-links {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Links inside nav */
+.nav-links a {
+    color: white;
+    border: solid white;
+    padding: 0.5em;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+/* Hide mobile version of Home on desktop */
+.mobile-home {
+    display: none;
+}
+
+/* Image link styles */
+.nav-links a img {
+    width: 1.9em;
+    vertical-align: middle;
+    margin: 0;
+    border: none;
+}
+
+.nav-links a.icon-link {
+    border: none;
+    padding: 0;
+}
+
+/* --- Responsive (mobile) --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1em;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        border: none;
+        padding: 0.75em 0;
+    }
+
+    .brand {
+        display: none;
+    }
+
+    .mobile-home {
+        display: block;
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+

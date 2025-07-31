@@ -6,6 +6,9 @@
     <title>CV_Ian_Hosten</title>
 
     <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <style>
         #headshot{float: right;}
     </style>

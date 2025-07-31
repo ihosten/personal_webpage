@@ -1,11 +1,28 @@
-<nav id="navbar" style="display: flex; justify-content: space-between; align-items: center; font-size: 1.2rem; padding: 10px;">
-    <a style="text-align: left;" href="home_page.php">Ian Hosten</a>
-    <div style="display: flex; gap: 15px; align-items: center;">
-        <a href="cv.php">CV</a>
-        <a href="resources.php">Resources</a>
-        <a href="coaching_tools.php">Coaching Tools</a>
-        <a href="https://github.com/ihosten" target="_blank"><img src="/images/git_logo.png" alt="GitHub" style="width: 20px;vertical-align: middle;margin: 0px;"></a>
-        <a href="https://www.linkedin.com/in/ian-hosten-9a8486149/" target="_blank"><img src="/images/linkedin_logo.png" alt="LinkedIn" style="width: 25px; vertical-align: middle;margin: 0px;"></a>
-        <a href="https://linktr.ee/hostenian?fbclid=PAZXh0bgNhZW0CMTEAAaaurxpjt-oBBiBbGHjjRAjZ4TRO9nun52WDhXbKd0GaXMSe77Ng2wWs0fg_aem_RO9ntHTuqbct46vKYGp4SA" target="_blank"><img src="/images/linktree_logo.png" alt="LinkedIn" style="width: 32.5px; vertical-align: middle;margin: 0px;"></a>
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="/pages/home_page.php" class="brand">Home</a>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="/pages/home_page.php" class="mobile-home">Home</a> <!-- visible only on mobile -->
+      <a href="/pages/coaching_tools.php">Coaching Tools</a>
+      <a href="/pages/cv.php">CV</a>
+      <a href="/pages/references.php">References</a>
+      <a class="icon-link" href="https://github.com/ihosten" target="_blank">
+        <img src="/images/git_logo.png" alt="GitHub">
+      </a>
+      <a class="icon-link" href="https://www.linkedin.com/in/ian-hosten-9a8486149/" target="_blank">
+        <img src="/images/linkedin_logo.png" alt="LinkedIn">
+      </a>
+      <a class="icon-link" href="https://linktr.ee/hostenian" target="_blank">
+        <img src="/images/linktree_logo.png" alt="Linktree">
+      </a>
     </div>
+  </div>
 </nav>
+
+<script>
+function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('show');
+}
+</script>
