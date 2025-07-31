@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+    <title>ianhosten resources</title>
 </head>
 <body>
     <?php require 'navbar.html';?>

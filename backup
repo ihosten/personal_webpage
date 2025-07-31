@@ -1,0 +1,24 @@
+<nav id="navbar" style="display: flex; justify-content: space-between; align-items: center; font-size: 1.2rem; padding: 10px;">
+    <a style="text-align: left;" href="home_page.php">Ian Hosten</a>
+    <div style="display: flex; gap: 15px; align-items: center;">
+        <a href="cv.php">CV</a>
+        <a href="resources.php">Resources</a>
+        <a href="coaching_tools.php">Coaching Tools</a>
+        <a href="https://github.com/username"><img src="git_logo.png" alt="GitHub" style="width: 20px;vertical-align: middle;"></a>
+        <a href="https://www.linkedin.com/in/ian-hosten-9a8486149/"><img src="linkedin_logo.png" alt="LinkedIn" style="width: 20px; vertical-align: middle;"></a>
+        <a href="#">Linktree</a>
+    </div>
+</nav>
+
+<div id="navbar" style="display: flex; justify-content: space-between; align-items: center; font-size:1.5em;">
+    <a style="text-align:left;" href="home_page.php">Ian Hosten</a>
+    <span style="text-align:right;">
+        <a href="cv.php">CV</a>
+        <a href="resources.php">Resources</a>
+        <a href="coaching_tools.php">Coaching Tools</a>
+        <a href=""><img src="git_logo.png" alt="GitHub" style="width: 20px"></a> 
+        <a href="https://www.linkedin.com/in/ian-hosten-9a8486149/"><img src="linkedin_logo.png" alt="LinkedIn" style="width: 20px"></a> <!--voor mijn projectjes-->
+        <a>X</a>
+        <a>Linkertree</a>
+    </span>
+</div>

@@ -3,6 +3,10 @@
     color: white;
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+a, #navbar{
+    color: white;
+    text-decoration: none;
 }
