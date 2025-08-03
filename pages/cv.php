@@ -3,6 +3,7 @@
 <head>
     <title>Ian Hosten CV</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/images/logo_ih_coaching.png">
     <link rel="stylesheet" type="text/css" href="../stylesheet.css">
 
     <style>
