@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ian Hosten Referenes</title>
+    <title>Referenes</title>
 
     <link rel="stylesheet" type="text/css" href="../stylesheet.css">
     <link rel="icon" type="image/x-icon" href="/images/logo_ih_coaching.png">
@@ -11,12 +11,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <style>
-        #headshot{float: right;}
     </style>
 </head>
 <body>
 
     <?php require '../components/navbar.html';?>
+
+    <div id="sqs_container">
+        <div id="SQS_Logo">
+            <img src="/images/SQS_logo.png" alt="SQS Logo">
+        </div>
+        <div id="about_text">
+            Since the winter of 2024 I've been active as the strength and conditioning coach of the Soudal Quick-Step cycling team.
+            Here I am responsible for the periodization and planning of the strength training sessions of World-Tour cyclists.         
+        </div>
+    </div>
+
+    <div id="squadt_container">
+        <div id="squadt_logo">
+            <img src="/images/squadt_logo.png" alt="Squadt Logo">
+        </div>
+        <div id="about_text">
+            Since the 2024 I've been active as both an endurance and strenght coach for recreational athletes at Squadt.
+        </div>
+        <div id="about_text">
+            Since the 2024 I've been active as both an endurance and strenght coach for recreational athletes at Squadt.
+        </div>
+    </div>
     
     Professional Experience
         Soudal-Quick step
