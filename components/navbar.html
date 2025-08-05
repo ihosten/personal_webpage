@@ -1,27 +1,26 @@
-<nav id="navbar">
-  <div class="nav-container">
-    <a href="/pages/home_page.php" class="brand">
-      <img src="/images/logo_ih_coaching.png" alt="Home Icon" class="home-icon" style="width:0.65em;">
-      Home
-    </a>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <div class="nav-links" id="navLinks">
-      <a href="/pages/home_page.php" class="mobile-home">Home</a> <!-- visible only on mobile -->
-      <a href="/pages/coaching_tools.php">Coaching Tools</a>
-      <a href="/pages/references.php">References</a>
-      <a href="/pages/cv.php">CV</a>
-      <a href="/pages/about.php">About</a>
-      <a class="icon-link" href="https://github.com/ihosten" target="_blank">
-        <img src="/images/git_logo.png" alt="GitHub">
-      </a>
+<!-- Nav -->
+<nav id="nav">
+	<ul class="links">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="cv.php">CV</a></li>
+	</ul>
+	<ul class="icons">
+		<li>
       <a class="icon-link" href="https://www.linkedin.com/in/ian-hosten-9a8486149/" target="_blank">
-        <img src="/images/linkedin_logo.png" alt="LinkedIn">
+        <span class="label">
+          <img src="images/linkedin_logo.png" alt="LinkedIn">
+        </span>
       </a>
-      <a class="icon-link" href="https://linktr.ee/hostenian" target="_blank">
-        <img src="/images/linktree_logo.png" alt="Linktree">
+    </li>
+		<li>
+      <a class="icon-link" href="https://github.com/ihosten">
+        <span class="label" target="_blank">
+          <img src="images/git_logo.png" alt="GitHub">
+        </span>
       </a>
-    </div>
-  </div>
+    </li>
+	</ul>
 </nav>
 
 <script>
@@ -29,4 +28,13 @@ function toggleMenu() {
     const navLinks = document.getElementById('navLinks');
     navLinks.classList.toggle('show');
 }
+</script>
+
+<script>
+const currentPage = window.location.pathname;
+navLinks.forEach(link => {
+  if (currentPage.endsWith(link.getAttribute("href"))) {
+    link.parentElement.classList.add("active");
+  }
+});
 </script>
