@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Ian Hosten Coaching</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="icon" type="image/x-icon" href="/images/logo_ih_coaching.png">
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+        <div id="wrapper" class="fade-in">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="index.html" class="logo">Ian Hosten Coaching</a>
+            </header>
+
+            <!-- Nav -->
+            <div id="navbar-container"></div>
+
+            <div id="main">
+                The strength coaching page 
+            </div>
+
+            <!-- Footer -->
+            <div id="footer-container"></div>
+        </div>
+    
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/load_html.js"></script>
+        <script src="assets/js/highlightActiveNav.js"></script>
+        <script>
+            loadHTML("navbar-container", "components/navbar.html", function () {
+                highlightActiveLink();        // run highlight
+                initializeNavPanel();        // only now safe to run
+            });
+        </script>
+        <script>loadHTML("footer-container", "components/footer.html");</script>
+        
+        <script src="assets/js/navPanel.js"></script>
+        <script>
+            $(document).ready(function () {
+                initializeNavPanel();
+            });
+        </script>
+    </body>
+</html>
