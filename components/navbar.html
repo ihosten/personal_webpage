@@ -2,7 +2,15 @@
 <nav id="nav">
 	<ul class="links">
 		<li><a href="index.html">Home</a></li>
-    <li><a href="endurance.html">Endurance Coaching</a></li>
+
+    <li>
+      <a href="#">Endurance Coaching</a>
+      <ul class="dropdown">
+        <li><a href="endurance.html">Training Plans</a></li>
+        <li><a href="endurance.html">Coaching Tips</a></li>
+      </ul>
+    </li>
+
     <li><a href="strength.html">Strength Coaching</a></li>
     <li><a href="exercise_tests.html">Exercise Testing</a></li>
     <li><a href="coaching_tools.html">Coaching Tools</a></li>
@@ -28,16 +36,19 @@
 
 <script>
 function toggleMenu() {
-    const navLinks = document.getElementById('navLinks');
+    const navLinks = document.getElementById('#nav ul.links');
     navLinks.classList.toggle('show');
 }
 </script>
 
 <script>
+const navLinks = document.querySelectorAll('#nav ul.links li a');
 const currentPage = window.location.pathname;
+
 navLinks.forEach(link => {
   if (currentPage.endsWith(link.getAttribute("href"))) {
     link.parentElement.classList.add("active");
   }
 });
 </script>
+
