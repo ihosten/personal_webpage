@@ -3500,7 +3500,7 @@ input, select, textarea {
 		}
 
 /* Nav */
-	
+
 	#nav {
 		color: #ffffff;
 		display: -moz-flex;
@@ -3641,21 +3641,6 @@ input, select, textarea {
 			margin-bottom: 0;
 		}
 
-		#nav ul li ul.dropdown li {
-			display: block;
-		}
-
-		#nav ul li ul.dropdown {
-			width: 100%;
-			background: blue;
-			position: absolute;
-			z-index: 999;
-			display: none;
-		}
-
-		#nav ul li:hover ul.dropdown {
-			display: block;
-		}
 
 		@media screen and (max-width: 980px) {
 			#nav {
