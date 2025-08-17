@@ -3124,17 +3124,17 @@ input, select, textarea {
 	}
 
 		#wrapper > .bg {
-			position: absolute;
+			position: fixed;
 			top: 0;
 			left: 0;
-			width: 100%;
-			height: 100%;
+			width: 100vw;
+    		height: 100vh;
 			background-color: #212931;
 			background-image: url("../../images/maes1.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/maes1.png");
-			background-size: auto,								auto,														100% auto;
-			background-position: center,								center,														top center;
-			background-repeat: repeat,								no-repeat,													no-repeat;
-			background-attachment: scroll,								scroll,														scroll;
+			background-size: cover, auto, cover;
+			background-position: center, center, top center;
+			background-repeat: no-repeat;
+			background-attachment: scroll, scroll,scroll;
 			z-index: -1;
 		}
 
@@ -3518,8 +3518,8 @@ input, select, textarea {
 		overflow: hidden;
 		padding: 0 2rem 0 0;
 		position: relative;
-		width: calc(100% - 4rem);
-		max-width: 72rem;
+		width: 100%;
+		max-width: none;
 		z-index: 2;
 	}
 
@@ -3654,9 +3654,9 @@ input, select, textarea {
 	#main {
 		background-color: #ffffff;
 		position: relative;
-		margin: 0 auto;
-		width: calc(100% - 4rem);
-		max-width: 72rem;
+		margin: 0;
+		width: 100%;
+		max-width: none;
 		z-index: 2;
 	}
 
@@ -3853,9 +3853,9 @@ input, select, textarea {
 		color: #909498;
 		cursor: default;
 		position: relative;
-		margin: 0 auto;
-		width: calc(100% - 4rem);
-		max-width: 72rem;
+		margin: 0;
+		width: 100%;
+		max-width: none;
 		z-index: 2;
 	}
 
