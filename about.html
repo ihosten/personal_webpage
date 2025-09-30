@@ -11,26 +11,29 @@
 
   <style>
 
-    * { box-sizing: border-box; }
-
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
       background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
       text-align: center;
     }
 
     #main {
-      padding: 2rem;
+      padding: 3rem 2rem;
+      margin: auto;
     }
 
     h2.section-title {
       margin-top: 3rem;
       margin-bottom: 1.5rem;
-      font-size: 1.8rem;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.5rem;
+      font-size: 2rem;
+      border-bottom: 3px solid #18bfef;
+      color: #1e252d;
+      border-radius: 4px;
+      background: #f0f4f8;
+      padding: 1rem 0.5rem;
     }
 
     .experience-item {
@@ -38,54 +41,64 @@
       gap: 1.5rem;
       margin-bottom: 2rem;
       align-items: center;
+      transition: transform 0.3s ease;
     }
 
     .experience-item img {
       flex-shrink: 0;
-      width: 90px;
+      width: 80px;
       height: auto;
       object-fit: contain;
+      border-radius: 6px;
+      transition: transform 0.3s ease;
+    }
+
+    .experience-item img:hover {
+      transform: scale(1.05);
     }
 
     .experience-content {
       background: #fff;
       padding: 1rem 1.2rem;
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       flex: 1;
-      align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .experience-item:hover .experience-content {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     }
 
     .experience-content h3 {
-      margin: 0;
-      font-size: 1.2rem;
-      color: #333;
-      align-items: center;
+      font-size: 1.4rem;
+      color: #1e252d;
+      margin-bottom: 0.5rem;
     }
 
     .experience-content p {
-      margin-top: 0.5rem;
       font-size: 1rem;
-      line-height: 1.5;
       color: #555;
+      line-height: 1.5;
       text-align: center;
-      align-items: center;
     }
 
     @media (max-width: 700px) {
       .experience-item {
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        gap: 1rem;
       }
 
       .experience-item img {
         width: 70px;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
       }
 
       .experience-content {
         text-align: center;
+        width: 100%;
       }
     }
   </style>
@@ -112,7 +125,7 @@
         <img src="/images/logo_ih_coaching.png" alt="ih coaching Logo">
         <div class="experience-content">
           <h3>Ian Hosten Coaching (Since 2025)</h3>
-          <p>In 2025 I decided to start my own coaching company. Here I focus on endurance athletes ...</p>
+          <p>In 2025 I decided to start my own coaching company. Here I focus on endurance athletes, assisting in strength and endurance training for cyclists, runners, and triathletes.</p>
         </div>
       </div>
 
@@ -120,7 +133,7 @@
         <img src="/images/SQS_logo.png" alt="SQS Logo">
         <div class="experience-content">
           <h3>Soudal Quick-Step (Since Winter 2024)</h3>
-          <p>Strength and conditioning coach responsible for periodization and planning ...</p>
+          <p>Strength and conditioning coach responsible for periodization and planning of strength training sessions for World-Tour cyclists.</p>
         </div>
       </div>
 
@@ -128,7 +141,7 @@
         <img src="/images/squadt_logo.png" alt="Squadt Logo">
         <div class="experience-content">
           <h3>Squadt (Since 2024)</h3>
-          <p>At Squadt I work as a freelance endurance and strength coach ...</p>
+          <p>Freelance endurance and strength coach for competitive and recreational athletes.</p>
         </div>
       </div>
 
@@ -136,7 +149,7 @@
         <img src="/images/bonami_logo.avif" alt="Bonami Logo">
         <div class="experience-content">
           <h3>Bonami Sportcoaching (Since 2023)</h3>
-          <p>Endurance coach for competitive and recreational athletes ...</p>
+          <p>Endurance coach for competitive and recreational athletes, including runners and cyclists competing internationally.</p>
         </div>
       </div>
 
@@ -147,7 +160,7 @@
         <img src="/images/fcb_logo.png" alt="FCB Logo">
         <div class="experience-content">
           <h3>FC Club Brugge (2025)</h3>
-          <p>I performed an internship in the Belgian leading soccer club ...</p>
+          <p>I performed an internship in the Belgian leading soccer club 'Club Brugge', mentored by Dr. Ir. Jan Van Haaren.</p>
         </div>
       </div>
 
@@ -155,7 +168,7 @@
         <img src="/images/logo_cycling_vlaanderen.png" alt="Cycling Vlaanderen Logo">
         <div class="experience-content">
           <h3>Cycling Vlaanderen Internship (2024)</h3>
-          <p>Assisted in the strength training of road, track, sprint, and BMX cyclists ...</p>
+          <p>Assisted in the strength training of road, track, sprint, and BMX cyclists and worked with top youth cyclists.</p>
         </div>
       </div>
 
@@ -163,7 +176,7 @@
         <img src="/images/logo_csg.png" alt="UZ Gent Logo">
         <div class="experience-content">
           <h3>UZ Gent Internship (2024)</h3>
-          <p>Exercise testing of elite football players, endurance athletes, and recovering patients ...</p>
+          <p>Exercise testing of elite football players, endurance athletes, and recovering patients at Ghent University Hospital.</p>
         </div>
       </div>
 
@@ -171,7 +184,7 @@
         <img src="/images/logo_insep.png" alt="INSEP Logo">
         <div class="experience-content">
           <h3>INSEP Internship (2023)</h3>
-          <p>Assisted in a study on repeated sprint training in heat and hypoxia ...</p>
+          <p>Assisted in a study on repeated sprint training in heat and hypoxia with U18 cyclists and elite kayak/canoe athletes.</p>
         </div>
       </div>
 
@@ -182,7 +195,7 @@
         <img src="/images/logo_howest.png" alt="Howest Logo">
         <div class="experience-content">
           <h3>Howest (2024-2025)</h3>
-          <p>Followed the advanced bachelor of Bioinformatics ...</p>
+          <p>Advanced bachelor of Bioinformatics, learning data analysis, machine learning, and sports data management.</p>
         </div>
       </div>
 
@@ -190,7 +203,7 @@
         <img src="/images/deakin_logo.png" alt="Deakin Logo">
         <div class="experience-content">
           <h3>Deakin University (2023)</h3>
-          <p>Exchange program at Deakin University, focusing on muscle physiology ...</p>
+          <p>Exchange program focusing on muscle physiology and molecular exercise physiology.</p>
         </div>
       </div>
 
@@ -198,7 +211,7 @@
         <img src="/images/vts_logo.png" alt="VTS Logo">
         <div class="experience-content">
           <h3>Flemish Trainer School (2022)</h3>
-          <p>Obtained the degree of Cycling Trainer B ...</p>
+          <p>Obtained the degree of Cycling Trainer B, the second highest level in Belgium.</p>
         </div>
       </div>
 
@@ -206,7 +219,7 @@
         <img src="/images/ugent_logo.png" alt="UGent Logo">
         <div class="experience-content">
           <h3>Ghent University (2019-2024)</h3>
-          <p>Studied sport science, master thesis on training load quantification ...</p>
+          <p>Studied sport science; master's thesis on training load quantification and performance modeling for endurance athletes.</p>
         </div>
       </div>
 
@@ -231,15 +244,8 @@
       highlightActiveLink();
       initializeNavPanel();
     });
-  </script>
-  <script>
     loadHTML("footer-container", "components/footer.html");
-  </script>
-  <script src="assets/js/navPanel.js"></script>
-  <script>
-    $(document).ready(function () {
-      initializeNavPanel();
-    });
+    $(document).ready(function () { initializeNavPanel(); });
   </script>
 </body>
 </html>
