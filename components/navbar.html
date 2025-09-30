@@ -4,10 +4,13 @@
 		<li><a href="index.html">Home</a></li>
 
     <li>
-      <a href="#">Endurance Coaching</a>
+      <button class="has-dropdown" aria-expanded="false" aria-haspopup="true">
+        Endurance Coaching
+      </button>
       <ul class="dropdown">
-        <li><a href="endurance.html">Training Plans</a></li>
-        <li><a href="endurance.html">Coaching Tips</a></li>
+        <li><a href="endurance.html">Cycling</a></li>
+        <li><a href="endurance.html">Running</a></li>
+        <li><a href="endurance.html">Triathlon</a></li>
       </ul>
     </li>
 
@@ -50,5 +53,29 @@ navLinks.forEach(link => {
     link.parentElement.classList.add("active");
   }
 });
+</script>
+
+<script>
+  // Toggle on click for parent trigger
+  document.querySelectorAll('#nav .has-dropdown, #menu .has-dropdown, #navPanel .has-dropdown', '#nav .dropdown')
+  .forEach(trigger => {
+    trigger.addEventListener('click', e => {
+      e.preventDefault();
+      const li = trigger.closest('li');
+      li.classList.toggle('open');
+    });
+  });
+
+  // Close if clicking outside the nav
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#nav')) {
+      document.querySelectorAll('#nav ul.links li.open').forEach(li => {
+        li.classList.remove('open');
+        const t = li.querySelector('.has-dropdown');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
 </script>
 
