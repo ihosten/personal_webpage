@@ -10,85 +10,82 @@
   <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 
   <style>
-    /* Reset and base styles */
-    * {
-      box-sizing: border-box;
-    }
+
+    * { box-sizing: border-box; }
 
     body {
       font-family: Arial, sans-serif;
       background-color: #f9f9f9;
       margin: 0;
       padding: 0;
+      text-align: center;
     }
 
     #main {
       padding: 2rem;
     }
 
-    .timeline-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 2rem;
-      gap: 1rem;
+    h2.section-title {
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
     }
 
-    .timeline-icon {
-      flex-shrink: 0;
-      width: 70px;
-      height: 70px;
-      background: white;
-      border: 3px solid #555;
-      border-radius: 50%;
-      overflow: hidden;
+    .experience-item {
       display: flex;
-      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
       align-items: center;
     }
 
-    .timeline-icon img {
-      width: 80%;
+    .experience-item img {
+      flex-shrink: 0;
+      width: 90px;
       height: auto;
+      object-fit: contain;
     }
 
-    .timeline-content {
+    .experience-content {
       background: #fff;
-      padding: 1rem;
+      padding: 1rem 1.2rem;
       border-radius: 6px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
       flex: 1;
+      align-items: center;
     }
 
-    .timeline-content h3 {
-      margin-top: 0;
+    .experience-content h3 {
+      margin: 0;
       font-size: 1.2rem;
+      color: #333;
+      align-items: center;
     }
 
-    .timeline-content p {
-      margin: 0.5rem 0 0;
+    .experience-content p {
+      margin-top: 0.5rem;
       font-size: 1rem;
       line-height: 1.5;
+      color: #555;
+      text-align: center;
+      align-items: center;
     }
 
-    @media (max-width: 600px) {
-      .timeline-item {
+    @media (max-width: 700px) {
+      .experience-item {
         flex-direction: column;
         align-items: center;
         text-align: center;
       }
 
-      .timeline-icon {
-        width: 60px;
-        height: 60px;
+      .experience-item img {
+        width: 70px;
         margin-bottom: 1rem;
       }
 
-      .timeline-content h3 {
-        font-size: 1rem;
-      }
-
-      .timeline-content p {
-        font-size: 0.9rem;
+      .experience-content {
+        text-align: center;
       }
     }
   </style>
@@ -107,169 +104,112 @@
 
     <!-- Main content -->
     <div id="main">
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <img src="/images/logo_ih_coaching.png" alt="ih coaching Logo">
-        </div>
-        <div class="timeline-content">
+
+      <!-- PROFESSIONAL EXPERIENCE -->
+      <h2 class="section-title">Professional Experience</h2>
+
+      <div class="experience-item">
+        <img src="/images/logo_ih_coaching.png" alt="ih coaching Logo">
+        <div class="experience-content">
           <h3>Ian Hosten Coaching (Since 2025)</h3>
-          <p>
-            In 2025 I decided to start my own coaching company. 
-            Here I focus on the coaching of endurance athletes.
-            Assisting athletes both in there strength and endurance training.
-            I coach cyclists, runners and triathletes.
-            I coach and have coached high performance athletes in competitive (professional) cycling and elite triatlon and xterra level.
-          </p>
+          <p>In 2025 I decided to start my own coaching company. Here I focus on endurance athletes ...</p>
         </div>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <img src="/images/fcb_logo.png" alt="FCB Logo">
-        </div>
-        <div class="timeline-content">
-          <h3>FC Club Brugge (2025)</h3>
-          <p>
-            I performed an internship in the Belgian leading soccer club 'Club Brugge'. 
-            Here I was mentored by Dr. Jan Van Haaren. A leading expert in the application of machine learning in soccer.
-            This internship enabled me to transfer my theoretical data analytics skills to a practical application in high performance sports contexts.
-          </p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <img src="/images/logo_howest.png" alt="Howest Logo">
-        </div>
-        <div class="timeline-content">
-          <h3>Howest (2024-2025)</h3>
-          <p>
-            Because I wanted to improve my skills in data analysis I followed an additional formation.
-            The advanced bachelor of Bioinformatics.
-            Thanks to this formation I am able to build websites, host databases, apply machine learning algorithms and analyze large amounts of sports data.
-            Additionally, I followed courses specifically focused on the analysis of biological and genetic data.
-          </p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <img src="/images/SQS_logo.png" alt="SQS Logo">
-        </div>
-        <div class="timeline-content">
+      <div class="experience-item">
+        <img src="/images/SQS_logo.png" alt="SQS Logo">
+        <div class="experience-content">
           <h3>Soudal Quick-Step (Since Winter 2024)</h3>
-          <p>Strength and conditioning coach responsible for periodization and planning of strength training sessions for World-Tour cyclists.</p>
+          <p>Strength and conditioning coach responsible for periodization and planning ...</p>
         </div>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <img src="/images/squadt_logo.png" alt="Squadt Logo">
-        </div>
-        <div class="timeline-content">
+      <div class="experience-item">
+        <img src="/images/squadt_logo.png" alt="Squadt Logo">
+        <div class="experience-content">
           <h3>Squadt (Since 2024)</h3>
-          <p>
-            At Squadt I work as a freelance endurance and strength coach for competitive and recreational athletes.
-          </p>
+          <p>At Squadt I work as a freelance endurance and strength coach ...</p>
         </div>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <img src="/images/logo_cycling_vlaanderen.png" alt="Cycling Vlaanderen Logo">
-        </div>
-        <div class="timeline-content">
-          <h3>Cycling Vlaanderen Internship (2024)</h3>
-          <p>
-            Here I sssisted in the strength training of road, track, sprint, and BMX cyclists. 
-            Additionally I participated in team pursuit training and worked with international top youth cyclists.
-          </p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <img src="/images/logo_csg.png" alt="Centrum Sport Geneeskunde Logo">
-        </div>
-        <div class="timeline-content">
-          <h3>UZ Gent Internship (2024)</h3>
-          <p>
-            During this internship I gained knowledge about the different testing methods for athletes.
-            Exercise testing of elite football players, endurance athletes, and recovering cancer patients at the Ghent University Hospital.
-          </p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <img src="/images/logo_insep.png" alt="INSEP Logo">
-        </div>
-        <div class="timeline-content">
-          <h3>INSEP Internship (2023)</h3>
-          <p>
-            Assisted in a study on repeated sprint training in heat and hypoxia involving U18 cyclists and elite kayak/canoe athletes. 
-            This enabled me to get insight in the use of high intensity interval training and the use of environmental stressors to optimize performance.
-            Many participants of this training study achieved Olympic medals in the Paris olympics.
-          </p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <img src="/images/deakin_logo.png" alt="Deakin Logo">
-        </div>
-        <div class="timeline-content">
-          <h3>Deakin University (2023)</h3>
-          <p>
-            For a half year I went on an exchange program to Deakin University, the worlds leading sport science University.
-            Here I deepend myself into muscle physiology and molecular exercise physiology.
-          </p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <img src="/images/bonami_logo.png" alt="Bonami Logo">
-        </div>
-        <div class="timeline-content">
+      <div class="experience-item">
+        <img src="/images/bonami_logo.avif" alt="Bonami Logo">
+        <div class="experience-content">
           <h3>Bonami Sportcoaching (Since 2023)</h3>
-          <p>
-            Endurance coach for competitive and recreational athletes. 
-            Coached road runners, trail runners, ultra runners, road cyclists, XCO riders, and ultra-endurance cyclists.
-            Of which some competing in internationally high level competitions getting excellent results.
-          </p>
+          <p>Endurance coach for competitive and recreational athletes ...</p>
         </div>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <img src="/images/vts_logo.png" alt="VTS Logo">
+      <!-- INTERNSHIPS -->
+      <h2 class="section-title">Internships</h2>
+
+      <div class="experience-item">
+        <img src="/images/fcb_logo.png" alt="FCB Logo">
+        <div class="experience-content">
+          <h3>FC Club Brugge (2025)</h3>
+          <p>I performed an internship in the Belgian leading soccer club ...</p>
         </div>
-        <div class="timeline-content">
+      </div>
+
+      <div class="experience-item">
+        <img src="/images/logo_cycling_vlaanderen.png" alt="Cycling Vlaanderen Logo">
+        <div class="experience-content">
+          <h3>Cycling Vlaanderen Internship (2024)</h3>
+          <p>Assisted in the strength training of road, track, sprint, and BMX cyclists ...</p>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <img src="/images/logo_csg.png" alt="UZ Gent Logo">
+        <div class="experience-content">
+          <h3>UZ Gent Internship (2024)</h3>
+          <p>Exercise testing of elite football players, endurance athletes, and recovering patients ...</p>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <img src="/images/logo_insep.png" alt="INSEP Logo">
+        <div class="experience-content">
+          <h3>INSEP Internship (2023)</h3>
+          <p>Assisted in a study on repeated sprint training in heat and hypoxia ...</p>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <h2 class="section-title">Education</h2>
+
+      <div class="experience-item">
+        <img src="/images/logo_howest.png" alt="Howest Logo">
+        <div class="experience-content">
+          <h3>Howest (2024-2025)</h3>
+          <p>Followed the advanced bachelor of Bioinformatics ...</p>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <img src="/images/deakin_logo.png" alt="Deakin Logo">
+        <div class="experience-content">
+          <h3>Deakin University (2023)</h3>
+          <p>Exchange program at Deakin University, focusing on muscle physiology ...</p>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <img src="/images/vts_logo.png" alt="VTS Logo">
+        <div class="experience-content">
           <h3>Flemish Trainer School (2022)</h3>
-          <p>
-            In 2022 I obtained the degree of Cycling Trainer B. The second highest level in Belgium.
-            I obtained this degree in adition to my Sport Science studies at Ghent University.
-            This enabled me to further specialize into the world of endurance sports.
-          </p>
+          <p>Obtained the degree of Cycling Trainer B ...</p>
         </div>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-icon">
-          <img src="/images/ugent_logo.png" alt="Ugent Logo">
-        </div>
-        <div class="timeline-content">
+      <div class="experience-item">
+        <img src="/images/ugent_logo.png" alt="UGent Logo">
+        <div class="experience-content">
           <h3>Ghent University (2019-2024)</h3>
-          <p>
-            After competing in competitive cycling for years I was intrigued by the science of training and exercise physiology.
-            Fot this I started studying sport science at Ghent Universiy. Here I learned about the working of the human body and how 
-            it can be manipulated to optimize performance.
-            In my masters thesis I worked around training load quantification, performance modelling,
-            training load quantification for strength training and how strength training influences endurance training and performance.
-          </p>
+          <p>Studied sport science, master thesis on training load quantification ...</p>
         </div>
       </div>
+
     </div>
 
     <!-- Footer -->

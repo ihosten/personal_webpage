@@ -3680,21 +3680,26 @@ input, select, textarea {
 	/* Dropdown items */
 	#nav ul.links li > ul.dropdown a {
 		display: block;
-		padding: 0.75rem 1.25rem;
-		text-transform: none;
-		font-weight: 600;
+		padding: 2rem;   /* vertical padding smaller */
+		line-height: 2rem;    /* natural text height */
+		font-size: 0.8rem;
+		font-weight: 900;
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		text-transform: uppercase;
 		color: #ffffff;
-		border: 0; /* override link bottom border */
-	}
-	#nav ul.links li > ul.dropdown a:hover {
-		background: rgba(255,255,255,0.1);
+		text-align: left;        /* optional, looks better than center */
+		cursor: pointer;
+		transition: background-color 0.2s ease, color 0.2s ease;
+		}
+
+		#nav ul.links li > ul.dropdown a:hover {
+		background-color: rgba(255,255,255,0.1);
 		color: #18bfef;
-	}
+		}
 
 	/* Caret indicator on the parent button */
 	#nav .has-dropdown::after {
 		display: block; /* same as links */
-		line-height: 4rem; /* match navbar height */
 		font-size: 0.8rem; /* match links font size */
 		padding: 0 2rem; /* match links padding */
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* match hover */
@@ -3706,9 +3711,9 @@ input, select, textarea {
 		all: unset;               /* removes all default styles */
 		display: block;           /* needed after unset */
 		padding: 0 2rem;          /* match links */
-		line-height: 4rem;        /* match navbar height */
+		line-height: rem;        /* match navbar height */
+		font: inherit;
 		font-size: 0.8rem;        /* match links */
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-weight: 900;
 		letter-spacing: 0.075em;
 		text-transform: uppercase;
@@ -3720,6 +3725,17 @@ input, select, textarea {
 	#nav .has-dropdown:hover {
 		background-color: rgba(255, 255, 255, 0.1);
 		color: #18bfef;
+	}
+
+	#nav ul.links li > ul.dropdown a {
+		padding: 0 2rem;
+		text-align: center;
+		font-weight: 900;
+		color: #ffffff;
+		font-family: Helvetica;
+		text-transform: uppercase;
+		font-size: 0.8rem;
+		letter-spacing: 0.075em;
 	}
 
 	#nav ul.links > li.active { background-color: #ffffff; }
