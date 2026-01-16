@@ -233,12 +233,18 @@
   <script src="assets/js/load_html.js"></script>
   <script src="assets/js/highlightActiveNav.js"></script>
   <script>
-    loadHTML("navbar-container", "components/navbar.html", function () {
-      highlightActiveLink();
-      initializeNavPanel();
-    });
-    loadHTML("footer-container", "components/footer.html");
-    $(document).ready(function () { initializeNavPanel(); });
+      loadHTML("navbar-container", "components/navbar.html", function () {
+          highlightActiveLink();        // run highlight
+          initializeNavPanel();        // only now safe to run
+      });
+  </script>
+  <script>loadHTML("footer-container", "components/footer.html");</script>
+  
+  <script src="assets/js/navPanel.js"></script>
+  <script>
+      $(document).ready(function () {
+          initializeNavPanel();
+      });
   </script>
 </body>
 </html>

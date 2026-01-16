@@ -3660,7 +3660,7 @@ input, select, textarea {
 		position: absolute;
 		top: 100%;               /* directly under the parent li */
 		left: 0;
-		min-width: 220px;
+		min-width: 100%;
 		list-style: none;
 		margin: 0;
 		padding: 0.25rem 0;
@@ -3681,7 +3681,7 @@ input, select, textarea {
 	#nav ul.links li > ul.dropdown a {
 		display: block;
 		padding: 2rem;   /* vertical padding smaller */
-		line-height: 2rem;    /* natural text height */
+		line-height: 3rem;    /* natural text height */
 		font-size: 0.8rem;
 		font-weight: 900;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
@@ -3753,64 +3753,36 @@ input, select, textarea {
 	}
 
 	/* --- Mobile overrides --- */
+		/* --- Mobile overrides --- */
 	@media screen and (max-width: 980px) {
-		#nav {
-			display: none;   /* hide whole nav bar */
-		}
-
-
-		#nav button,
-		#menu button,
-		#navPanel button {
-		box-shadow: none;
-		}
-		
-		#nav .has-dropdown {
-			padding: 0.75rem 2rem;
-			line-height: 1.5rem;
-			font-size: 0.9rem;
-			height: auto;
-			background: none;
-			box-shadow: none;
-		}
-
-		#nav .has-dropdown::after {
-			line-height: 1.5rem;
-			font-size: 0.8rem;
-			padding: 0 0.5rem;
-		}
+	#nav ul.links li > ul.dropdown {
+		position: static;
+		display: none;
 	}
+
+	#nav ul.links li.open > ul.dropdown {
+		display: block;
+	}
+	}
+
+
 
 	/* MOBILE BEHAVIOR */
 	/* Desktop dropdown: hover & focus only above 980px */
 	@media screen and (min-width: 981px) {
-		#nav ul.links li:hover > ul.dropdown,
-		#nav ul.links li:focus-within > ul.dropdown {
-			display: block;
+	#nav ul.links li > ul.dropdown {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		display: none;
 	}
 
-
-		/* Let dropdowns flow naturally */
-		#nav ul.links li > ul.dropdown {
-			position: static;     /* no absolute on mobile */
-			min-width: 100%;      /* take full width of parent */
-			box-shadow: none;     /* optional: no floating shadow */
-			border-radius: 0;
-			background: rgba(30,37,45,0.97);
-			display: none;        /* still hidden until .open */
-		}
-
-		/* Show only when parent is toggled */
-		#nav ul.links li.open > ul.dropdown {
-			display: block;
-		}
-
-		/* Adjust dropdown links for vertical nav */
-		#nav ul.links li > ul.dropdown a {
-			padding: 0.75rem 2rem;
-			font-size: 0.9rem;
-		}
+	#nav ul.links li:hover > ul.dropdown,
+	#nav ul.links li:focus-within > ul.dropdown {
+		display: block;
 	}
+	}
+
 
 
 

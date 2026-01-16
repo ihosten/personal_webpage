@@ -4,9 +4,9 @@
 		<li><a href="index.html">Home</a></li>
 
     <li>
-      <button class="has-dropdown" aria-expanded="false" aria-haspopup="true">
+      <a href="#" class="has-dropdown" aria-expanded="false">
         Endurance Coaching
-      </button>
+      </a>
       <ul class="dropdown">
         <li><a href="endurance.html">Cycling</a></li>
         <li><a href="endurance.html">Running</a></li>
@@ -56,15 +56,7 @@ navLinks.forEach(link => {
 </script>
 
 <script>
-  // Toggle on click for parent trigger
-  document.querySelectorAll('#nav .has-dropdown, #menu .has-dropdown, #navPanel .has-dropdown, #nav .dropdown')
-  .forEach(trigger => {
-    trigger.addEventListener('click', e => {
-      e.preventDefault();
-      const li = trigger.closest('li');
-      li.classList.toggle('open');
-    });
-  });
+
 
   // Close if clicking outside the nav
   document.addEventListener('click', (e) => {

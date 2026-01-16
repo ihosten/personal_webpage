@@ -52,3 +52,17 @@ function initializeNavPanel() {
 	if (browser.os == 'wp' && browser.osVersion < 10)
 		$navPanel.css('transition', 'none');
 }
+
+$(document).on('click', '#nav .submenu > a, #navPanel .submenu > a', function (e) {
+    if (breakpoints.active('<=medium')) {
+        e.preventDefault();
+
+        const $li = $(this).parent('li');
+        $li.toggleClass('open');
+
+        $(this).attr(
+            'aria-expanded',
+            $li.hasClass('open')
+        );
+    }
+});
