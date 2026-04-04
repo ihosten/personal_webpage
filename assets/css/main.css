@@ -17,10 +17,24 @@ background-attachment:fixed;
 
 
 @media screen and (max-width: 480px) {
-html,body {
+body {
 background-attachment:scroll;
 }
+
+body, input, select, textarea {
+font-family: "Merriweather", Georgia, serif;
+font-weight: 300;
+font-size: 1rem;
+line-height: 2.375;
 }
+
+p {
+text-align: justify;
+margin: 0 0 2rem;
+}
+}
+
+
 
 html {
 box-sizing:border-box
@@ -4351,3 +4365,4 @@ box-shadow:0 0 1.5rem 0 #0003;
 visibility:visible
 }
 }
+
