@@ -1,0 +1,64 @@
+version = 1
+revision = 5
+requires-python = ">=3.13"
+
+[[package]]
+name = "css"
+version = "0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b0/51/7e471f38490101490bbca351621ffddb24cb3c3161fbc286aa757c7f4f0b/css-0.1.tar.gz", hash = "sha256:44b15465f6a8e736077727ecbe978ff9578517eecac42e4cca31e530fad8eab1", size = 1789, upload-time = "2010-07-15T20:50:54.711Z" }
+
+[[package]]
+name = "javascript"
+version = "1!1.2.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/1d/e5/782b7cfba2491e96ff463e24fadb4486ce2bc226f2071e493a9caa07f345/javascript-1!1.2.6.tar.gz", hash = "sha256:442e885b54dd9a6afe797dd6d5c3c575ec38da02a7d16749bf315aad0fa620c9", size = 38508, upload-time = "2025-09-25T11:15:44.411Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/95/4f/43e4b0bd6b76930e921cf5d9357cefb8ace9a2615bf53c05ff2e314ec434/javascript-1!1.2.6-py3-none-any.whl", hash = "sha256:0c68af196d450715bb74e9a25f11db67435070d91ceaff5ef28c4b4c95235ebf", size = 34802, upload-time = "2025-09-25T11:15:42.142Z" },
+]
+
+[[package]]
+name = "personal-webpage"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "css" },
+    { name = "javascript" },
+    { name = "php" },
+    { name = "scss" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "css", specifier = ">=0.1" },
+    { name = "javascript", specifier = ">=1!1.2.6" },
+    { name = "php", specifier = ">=1.2.1" },
+    { name = "scss", specifier = ">=0.8.73" },
+]
+
+[[package]]
+name = "php"
+version = "1.2.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/50/f0/b6204711a0b1c60124f52e811cd841488579d116ee8ef81a26e6420a8cf5/php-1.2.1.tar.gz", hash = "sha256:6ab4fb13397a46e3cf0aba5b800884221cafdf636b04a44f19e658a8c9ac6542", size = 4152, upload-time = "2020-10-27T10:41:52.912Z" }
+
+[[package]]
+name = "pyparsing"
+version = "3.3.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/e4/11/b213bebff182584360cb8d17c72c1677fec5c5c228de439e63bcf8ab1c8f/pyparsing-3.3.3.tar.gz", hash = "sha256:928ae7e20211f3b6f3915a72f06a0cfd29ab9d24279dd6346b6b1a7146397d36", size = 1050487, upload-time = "2026-09-20T20:59:05.609Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/38/bb/d215ee7c73b61497b28a5503f9f53523f294fcc936762b7caf90e0c1c2b5/pyparsing-3.3.3-py3-none-any.whl", hash = "sha256:ece8c00a69cf01b45d0b1dedabb469c90d8caf996d4fda40f147627a122849a4", size = 126420, upload-time = "2026-09-20T20:59:04.025Z" },
+]
+
+[[package]]
+name = "scss"
+version = "0.8.73"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pyparsing" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/95/fe/12148c3f78db01c9622cf4b4f152537a00d0af8c056c1ef907046e7cfc19/scss-0.8.73.tar.gz", hash = "sha256:f9ea78b523a3e8787fa038837fb70999f78074eedb3bdeace34885d67a6d5418", size = 55580, upload-time = "2014-06-15T17:05:34.512Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8c/75/f93bba56c6e376f725e21aa3c7d9a7ce5ed7d71db7fc69c2e0014dc16fe0/scss-0.8.73-py2.py3-none-any.whl", hash = "sha256:116e0baba328ccb9fd5bfe1a23e678fc294ca049f0f8188295487f1dbe416476", size = 38793, upload-time = "2014-06-15T17:05:36.919Z" },
+]
