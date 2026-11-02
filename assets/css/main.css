@@ -8,17 +8,21 @@ padding:0
 }
 
 body {
-background-image:url(../../images/maes1.png);
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
+  background:  #1e252d;
+}
+
+body.home {
+  background-image: url(../../images/maes1.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 
 
 @media screen and (max-width: 480px) {
-body {
-background-attachment:scroll;
+body.home {
+  background-attachment: scroll;
 }
 
 body, input, select, textarea {

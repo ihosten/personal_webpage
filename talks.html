@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Talks</title>
+  <meta name="description" content="Slides and handouts from talks and presentations given by Ian Hosten." />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+  <style>
+    #main {
+      padding: 3rem 2rem;
+      margin: auto;
+    }
+
+    .talks-intro {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h2.year-title {
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      border-bottom: 3px solid #18bfef;
+      color: #1e252d;
+      border-radius: 4px;
+      background: #f0f4f8;
+      padding: 1.2rem 0.5rem;
+      text-align: center;
+    }
+
+    .talk {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      background: #fff;
+      padding: 1rem 1.4rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 1.2rem;
+    }
+
+    .talk-info { flex: 1; }
+
+    .talk-info h3 {
+      font-size: 1.3rem;
+      color: #1e252d;
+      margin-bottom: 0.3rem;
+    }
+
+    .talk-meta {
+      font-size: 0.95rem;
+      color: #777;
+      line-height: 1.4;
+      margin-bottom: 0.4rem;
+    }
+
+    .talk-desc {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .talk .download {
+      flex-shrink: 0;
+      display: inline-block;
+      padding: 0.7rem 1.4rem;
+      background: #18bfef;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      border-bottom: none;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .talk .download:hover,
+    .talk .download:focus-visible {
+      background: #1e252d;
+      color: #fff;
+    }
+
+    .talks-empty {
+      text-align: center;
+      color: #777;
+    }
+
+    @media (max-width: 700px) {
+      #main { padding: 0.5rem; }
+      .talk {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body class="is-preload">
+  <div id="wrapper" class="fade-in">
+
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="logo">Ian Hosten Coaching</a>
+    </header>
+
+    <!-- Nav -->
+    <div id="navbar-container"></div>
+
+    <!-- Main content -->
+    <div id="main">
+      <p class="talks-intro">
+        Slides from talks and presentations I've given. Were you there? Download the PDF below.
+      </p>
+
+      <!-- The talks are generated here from the list in the script at the bottom -->
+      <div id="talks-container"></div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+  </div>
+
+  <!-- ======================================================
+       ADD NEW TALKS HERE
+       1. Put the PDF in the "talks" folder (e.g. talks/my_talk.pdf)
+       2. Add one block below. Order doesn't matter, the page sorts
+          itself by date (newest first) and groups by year.
+       date format: YYYY-MM-DD   ("description" is optional)
+       ====================================================== -->
+  <script>
+    const talks = [
+      {
+        title: "Krachttraining in wielrennen",
+        date: "2026-11-07",
+        event: "VTS Dag van de trainer, Gent",
+        description: "Aanalyse van de wetenschappelijke evidentie voor gebruik van krachttraining binnen het wielrennen met vertaling naar de praktijk",
+        file: "documents/2026-11-07-ian-hosten-krachttraining-wielrennen-vts.pdf"
+      }
+    ];
+  </script>
+
+  <script>
+    (function () {
+      const container = document.getElementById("talks-container");
+
+      function esc(s) {
+        const d = document.createElement("div");
+        d.textContent = s || "";
+        return d.innerHTML;
+      }
+
+      function formatDate(iso) {
+        const d = new Date(iso + "T00:00:00");
+        return d.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+      }
+
+      if (!talks.length) {
+        container.innerHTML = '<p class="talks-empty">No talks yet. Check back soon.</p>';
+        return;
+      }
+
+      // newest first
+      const sorted = talks.slice().sort((a, b) => b.date.localeCompare(a.date));
+
+      let html = "";
+      let currentYear = null;
+
+      sorted.forEach(t => {
+        const year = t.date.slice(0, 4);
+        if (year !== currentYear) {
+          html += '<h2 class="year-title">' + year + '</h2>';
+          currentYear = year;
+        }
+        html +=
+          '<div class="talk">' +
+            '<div class="talk-info">' +
+              '<h3>' + esc(t.title) + '</h3>' +
+              '<div class="talk-meta">' + esc(formatDate(t.date)) + (t.event ? ' &ndash; ' + esc(t.event) : '') + '</div>' +
+              (t.description ? '<div class="talk-desc">' + esc(t.description) + '</div>' : '') +
+            '</div>' +
+            '<a class="download" href="' + esc(t.file) + '" download>Download PDF</a>' +
+          '</div>';
+      });
+
+      container.innerHTML = html;
+    })();
+  </script>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/load_html.js"></script>
+  <script src="assets/js/highlightActiveNav.js"></script>
+  <script>
+    loadHTML("navbar-container", "components/navbar.html", function () {
+      highlightActiveLink();
+      initializeNavPanel();
+    });
+  </script>
+  <script>loadHTML("footer-container", "components/footer.html");</script>
+
+  <script src="assets/js/navPanel.js"></script>
+  <script>
+    $(document).ready(function () {
+      initializeNavPanel();
+    });
+  </script>
+</body>
+</html>
